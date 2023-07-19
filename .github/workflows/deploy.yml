@@ -27,6 +27,8 @@ jobs:
         uses: ./.github/actions/cached-dependency
         with:
           caching: 'false'
+      - name: Getting output of cache installtion status
+        run: echo "Cache used? ${{ steps.cache-deps.outputs.used-cache }} "
       - name: Test code
         id: run-tests
         run: npm run test
@@ -46,6 +48,8 @@ jobs:
         uses: ./.github/actions/cached-dependency
         with:
           caching: 'false'
+      - name: Getting output of cache installtion status
+        run: echo "Cache used? ${{ steps.cache-deps.outputs.used-cache }} "
       - name: Build website
         run: npm run build
       - name: Upload artifacts
