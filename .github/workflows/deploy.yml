@@ -88,4 +88,5 @@ jobs:
       - name: Get the code
         uses: actions/checkout@v3
       - name: Run custom access
+        run: echo "running aws deploy"
         # uses: ./.github/actions/dploy-s3-bucket-js
