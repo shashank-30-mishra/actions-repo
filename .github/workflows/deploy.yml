@@ -71,8 +71,9 @@ jobs:
       - name: Output contents
         run: ls
       - name: Deploy site
-        run: "deploying web"
+        run: echo "deploying web"
         # uses: ./.github/actions/dploy-s3-bucket-js
+        # uses: ./.github/actions/deploy-s3-bucket-docker
         # env:
         #   AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         #   AWS_SECRECT_ACCESS_KEY: ${{ secrets.AWS_SECRECT_ACCESS_KEY }}
