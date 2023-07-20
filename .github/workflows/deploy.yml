@@ -58,9 +58,9 @@ jobs:
           name: dist-files
           path: dist
   deploy:
-    permission:
-      id-token: write
-      contents: read
+    # permission:
+    #   id-token: write
+    #   contents: read
     needs: build
     runs-on: ubuntu-latest
     steps:
